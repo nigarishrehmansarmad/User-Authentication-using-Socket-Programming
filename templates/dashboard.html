@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const token = localStorage.getItem('jwt_token');
+    if (!token) {
+        alert('Authentication token missing. Please log in.');
+        window.location.href = "{{ url_for('login') }}";
+        return;
+    }
+
+    const socket = io({
+        auth: { token }
+    });
+
+    socket.on('connect', () => {
+        console.log('Connected to server via Socket.IO');
+    });
+
+    socket.on('secret_message', data => {
+        const secretDiv = document.getElementById('secret-message');
+        secretDiv.innerText = data.message;
+        secretDiv.style.display = 'block';
+    });
+
+    socket.on('server_response', data => {
+        console.log('Server response:', data.message);
+    });
+
+    socket.on('disconnect', () => {
+        alert('Disconnected from server. Please refresh or log in again.');
+    });
+
+    document.getElementById('secret-btn').addEventListener('click', () => {
+        socket.emit('get_secret', { token });
+    });
+
+    document.getElementById('logout-btn').addEventListener('click', () => {
+        localStorage.removeItem('jwt_token');
+        window.location.href = "{{ url_for('logout') }}";
+    });
+});
+</script>
+{% endblock %}
+
+{% block content %}
+<h2>Welcome, {{ username }}!</h2>
+
+<button id="secret-btn">View Secret Message (Real-Time)</button>
+
+<div id="secret-message" class="secret-message" style="display:none; margin-top: 20px;"></div>
+
+<button id="logout-btn" style="margin-top: 20px;">Logout</button>
+{% endblock %}
+

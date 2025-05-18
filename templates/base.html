@@ -1,0 +1,72 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My App{% endblock %}</title>
+    <!-- Google Fonts: Pacifico -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    {% block head %}{% endblock %}
+    <style>
+      .main-heading {
+        font-family: 'Pacifico', cursive;
+        font-size: 2.2em;
+        text-align: center;
+        color: #6b5b95;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        letter-spacing: 1px;
+      }
+    </style>
+</head>
+<body>
+    <div class="main-heading">
+        User Authentication using Socket Programming
+    </div>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="flash-messages">
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+    <!-- Consistent footer for all pages -->
+<footer class="main-footer">
+  <hr>
+  <div>
+      <b>Computer Networks Project:</b><br>
+      Nigarish Rehman Sarmad 22K-8723<br>
+      Uroosha Zehra Abidi 22K4048<br>
+      <span style="font-size:0.95em; color: rgba(255, 255, 255, 0.8);">
+          {{ current_date }}
+      </span>
+  </div>
+</footer>
+
+<style>
+  .main-footer {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 18px;
+      font-size: 1.08em;
+      color: white;                  /* White text */
+      background-color: #6b5b95;     /* Purple background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 15px 0;               /* Vertical padding */
+      border-radius: 8px;            /* Optional: rounded corners */
+  }
+  .main-footer hr {
+      margin-bottom: 10px;
+      border-color: rgba(255, 255, 255, 0.3); /* Light semi-transparent line */
+  }
+</style>
+
+</body>
+</html>
+
+

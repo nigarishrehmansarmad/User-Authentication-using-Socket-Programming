@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Logout{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='logout.css') }}">
+{% endblock %}
+{% block content %}
+<h2>Goodbye{% if username %}, {{ username }}{% endif %}!</h2>
+<p>You have been logged out.</p>
+<p><a href="{{ url_for('login') }}">Login again</a></p>
+{% endblock %}
