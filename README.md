@@ -31,20 +31,20 @@ Product-based project: This is a general-purpose secure real-time communication 
 
 ## Features
 1.	JWT-Based Stateless Authentication
-o	Secure and verifiable authentication using JSON Web Tokens, applicable across both HTTP and WebSocket protocols.
+    -> Secure and verifiable authentication using JSON Web Tokens, applicable across both HTTP and WebSocket protocols.
 2.	Secure Real-Time Socket Communication
-o	Each socket connection is authenticated using the token provided by the client. Unauthorized clients are immediately disconnected.
+   -> Each socket connection is authenticated using the token provided by the client. Unauthorized clients are immediately disconnected.
 3.	User Management
-o	Registration and login system with hashed password storage using bcrypt, protecting against credential theft.
-o	Forgot and reset password functionality for user’s ease.
+    -> Registration and login system with hashed password storage using bcrypt, protecting against credential theft.
+    -> Forgot and reset password functionality for user’s ease.
 4.	Secret Messaging Feature
-o	After authentication, users can trigger a real-time event to receive a personalized, randomly generated motivational secret message.
+    -> After authentication, users can trigger a real-time event to receive a personalized, randomly generated motivational secret message.
 5.	Flask-SocketIO Integration
-o	Combines Flask's HTTP capabilities with SocketIO's real-time communication, handling both seamlessly.
+    -> Combines Flask's HTTP capabilities with SocketIO's real-time communication, handling both seamlessly.
 6.	Session and Token Control
-o	Uses Flask sessions for HTTP routes and JWT tokens for SocketIO connections, ensuring consistency.
+    -> Uses Flask sessions for HTTP routes and JWT tokens for SocketIO connections, ensuring consistency.
 7.	Scalability
-o	The stateless architecture supports scaling with multiple server instances, avoiding shared session management.
+    -> The stateless architecture supports scaling with multiple server instances, avoiding shared session management.
 
 ## Contributors
 [@Uroosha Zehra Abidi](https://github.com/Uroosha4048)
