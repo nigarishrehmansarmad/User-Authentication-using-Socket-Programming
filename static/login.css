@@ -1,0 +1,38 @@
+/* login.css */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1.5px solid #d1d8e0; /* pastel gray-blue */
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #a29bfe; /* pastel lavender */
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #a29bfe; /* pastel lavender */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6c5ce7; /* deeper pastel purple */
+}

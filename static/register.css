@@ -1,0 +1,35 @@
+/* register.css - pastel minimalistic for register page */
+
+.form input[type="text"],
+.form input[type="password"] {
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1.5px solid #f8cdda; /* pastel pink */
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fbeffb;
+    transition: border-color 0.3s ease;
+}
+
+.form input[type="text"]:focus,
+.form input[type="password"]:focus {
+    border-color: #a3cef1; /* pastel blue */
+    outline: none;
+    background: #e0f7fa;
+}
+
+.form button {
+    padding: 12px;
+    background-color: #b5ead7; /* pastel mint */
+    border: none;
+    border-radius: 8px;
+    color: #4a4a4a;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #a3cef1; /* pastel blue */
+}

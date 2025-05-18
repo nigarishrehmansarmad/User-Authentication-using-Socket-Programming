@@ -1,0 +1,29 @@
+/* dashboard.css */
+
+button {
+    padding: 12px 18px;
+    background-color: #81ecec; /* pastel aqua */
+    border: none;
+    border-radius: 10px;
+    color: #2d3436; /* dark gray */
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #00b894; /* deeper teal */
+}
+
+.secret-message {
+    background-color: #dfe6e9; /* light pastel gray */
+    border-left: 6px solid #0984e3; /* pastel blue */
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: #2d3436;
+    font-size: 16px;
+    margin-bottom: 20px;
+}

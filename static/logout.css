@@ -1,0 +1,26 @@
+/* logout.css */
+
+h2 {
+    color: #fab1a0; /* pastel peach */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #636e72; /* muted gray */
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 600;
+    color: #ffeaa7; /* pastel yellow */
+}
+
+a:hover {
+    color: #fdcb6e; /* deeper pastel yellow */
+}
+

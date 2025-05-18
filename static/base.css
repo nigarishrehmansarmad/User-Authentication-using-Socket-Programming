@@ -1,0 +1,41 @@
+/* base.css - common styles for all pages */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* very light pastel blue */
+    margin: 0;
+    padding: 0;
+    color: #4a4a4a; /* soft dark gray */
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px 30px;
+    background-color: #ffffff; /* white */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(170, 190, 210, 0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #6b5b95; /* pastel purple */
+    margin-bottom: 25px;
+}
+
+a {
+    color: #a29bfe; /* pastel lavender */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.flash-messages {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    color: #ff6b81; /* pastel coral red */
+    font-weight: 600;
+}
