@@ -46,5 +46,6 @@ o	Uses Flask sessions for HTTP routes and JWT tokens for SocketIO connections, e
 7.	Scalability
 o	The stateless architecture supports scaling with multiple server instances, avoiding shared session management.
 
-
+## Contributors
+[@Uroosha Zehra Abidi](https://github.com/Uroosha4048)
 
